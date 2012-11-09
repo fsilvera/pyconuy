@@ -1,0 +1,38 @@
+#main_content{
+	width: 400px;
+	margin: 0 auto;
+}
+#main_content{
+	margin-top: 20px;
+}
+.post{
+	border-top: 1px solid #CCC;
+	margin-top: 15px;
+	padding-top: 10px;
+}
+
+.post .label_text{
+	display: block;
+}
+.post .editing .label_text{
+	display: none;
+}
+.post .edit{
+	display: none;
+}
+.post .editing .edit{
+	display: block;
+}
+
+
+label{
+	color: #CCC;
+	margin-bottom: 0px;
+}
+span{
+	margin-bottom: 10px;
+}
+
+#header{
+	margin: 10px 0 0 30px;
+}

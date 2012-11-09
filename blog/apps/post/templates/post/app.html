@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+	<script type="text/template" id="blog_tpl">
+		<h2>Blog</h2>	
+		<div id="post_content">
+			<p>Agregar Post</p>
+			<form method="post" action="." id="form">
+				<input type="text" id="title" placeholder="Título"/><br/>
+		
+				<textarea id="body" placeholder="Texto"></textarea><br/>
+				
+				<input type="submit" value="Agregar" class="btn btn-inverse"/>
+			</form>	
+	
+			<div id="post_list"></div>
+		</div>
+	</script>
+		
+	<script type="text/template" id="post_single_tpl">
+		<div>
+			<label>Título:</label> 
+			<span class="label_text"><%= title %>&nbsp;</span>
+			<input type="text" class="edit" name="title" value="<%= title %>"/>
+		</div>
+
+    	<div>
+			<label>Texto:</label> 
+			<span class="label_text"><%= body %></span>
+			<textarea id="body" class="edit" name="body"><%= body %></textarea>
+		</div>
+
+		<br/>
+		<a href="#" class="destroy">Eliminar</a>
+	</script>
+	
+
+	<script type="text/template" id="about_tpl">
+		<div>
+			<h2>About</h2>
+			<h4>Creando aplicaciones client-side con Django y Backbone.js</h4>
+			<br/>
+			<p>
+				Backbone.js es un framework MVC para javascript que permite hacer interfaces altamente interactivas del lado del cliente. Esta charla explica cómo integrar backbone.js del lado del cliente y Django del lado del servidor como backend para aplicaciones en js.
+			</p>
+		</div>
+	</script>	
+{% endblock %}
+
+
+
