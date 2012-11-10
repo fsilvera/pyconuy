@@ -97,15 +97,16 @@ $(document).ready(
                 posts.create({
                 	title: this.input_title.val(),
                 	body: this.textarea_body.val(),
-                });
+                });  // POST
                 this.input_title.val('');
                 this.textarea_body.val('');
                 this.addAll();
             },
         	
         });
-        
+		blog_view = new BlogView;
 
+		
     	var AboutView = Backbone.View.extend({
     		
     		el: $('#main_content'),
@@ -117,9 +118,7 @@ $(document).ready(
     	    }	
     	
     	});
-
 		about_view = new AboutView;
-		blog_view = new BlogView;
 
         
         var MenuView = Backbone.View.extend({
@@ -133,12 +132,10 @@ $(document).ready(
 			blog: function(event) {
 				event.preventDefault();
 				router.navigate('blog', true);
-				//router.blog();
 			},
 			about: function(event) {
 				event.preventDefault();
 				router.navigate('about', true);
-				//router.about();
 			}
         });
         
